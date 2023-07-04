@@ -1,7 +1,9 @@
 FROM mysql
-ENV MYSQL_RANDOM_ROOT_PASSWORD=1
+ENV MYSQL_ROOT_PASSWORD=root123
 ENV MYSQL_USER=jose
 ENV MYSQL_PASSWORD=jose123
 ENV MYSQL_DATABASE=ContentHub
+COPY User_table.sql /docker-entrypoint-initdb.d/1_User_table.sql
+COPY Posts_table.sql /docker-entrypoint-initdb.d/2_Posts_table.sql
 EXPOSE 3306
 VOLUME /var/lib/mysql
