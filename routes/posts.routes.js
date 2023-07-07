@@ -4,9 +4,10 @@ const router=Router();
 posts=require('../controllers/posts.controllers');
 
 router.get('/posts', posts.getPostsAll);
-//router.post('/posts', );
+router.get('/:id', posts.getPostId);
+router.post('/posts', posts.CreatePost);
 //router.put('', );
-//router.delete('',);
+router.delete('/:id', posts.DeletePostId);
 
 
 module.exports = router;
