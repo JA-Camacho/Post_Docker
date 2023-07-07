@@ -1,19 +1,31 @@
 const postController = {};
 const conexion = require("../database");
 postController.getPostsAll = async (req, res) => {
-  var sql = "SELECT * FROM ContentHub";
-  let resultado = await conexion.query(
-    sql
-  );
-  res.send(resultado.fields);
+  try {
+    const sql = "SELECT * FROM posts";
+    con.query(sql, function(err, result){
+        console.log(result);
+        res.send(result);
+    });
+    
+} catch (error) {
+    console.error(error);
+    res.status(500).send("Error al obtener los posts.");
+  };
 };
 
 postController.getPostId = async (req, res) => {
-  var sql = "SELECT * FROM ContentHub WHERE id = ";
-  let resultado = await conexion.query(
-    sql, req.ID
-  );
-  res.send(resultado.fields)
+   try {
+      const sql = "SELECT * FROM posts WHERE ID_posts = ?";
+      const id = req.params.id;
+      con.query(sql, [id], function(err, result) {
+          console.log(result);
+          res.send(result);
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Error al obtener el post.");
+    }
 };
 
 module.exports = postController;
