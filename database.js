@@ -1,16 +1,15 @@
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "yourusername",
-  password: "yourpassword"
+  host: "172.17.0.2",
+  user: "root",
+  password: "root123",
+  database: "ContentHub"
 });
 
-con.connect(function(err) {
+con.connect((err) => {
     if (err) throw err;
     console.log("Connected!");
-    con.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("Result: " + result);
-    });
   }); 
+
+  module.exports = con;
