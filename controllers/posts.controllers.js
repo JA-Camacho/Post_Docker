@@ -1,5 +1,5 @@
 const postController = {};
-const conexion = require("../database");
+const con = require("../database");
 postController.getPostsAll = async (req, res) => {
   try {
     const sql = "SELECT * FROM posts";
@@ -45,7 +45,7 @@ postController.DeletePostId = async (req, res) => {
   try {
     const sql = "DELETE FROM posts WHERE ID_post = ?";
     const id = req.params.id;
-    con.query(sql, [id], function(err, result) {
+    con.query(sql, id, function(err, result) {
         console.log("Post eliminado");
     });
   } catch (error) {
