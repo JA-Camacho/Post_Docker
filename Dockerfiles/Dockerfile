@@ -11,5 +11,6 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
+VOLUME /usr/src/app
 
 #CMD [ "node", "server.js"]
