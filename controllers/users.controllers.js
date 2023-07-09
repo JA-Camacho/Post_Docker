@@ -47,9 +47,10 @@ usersController.getUserId = async (req, res) => {
   usersController.DeleteUserId = async (req, res) => {
     try {
       const sql = "DELETE FROM usuarios WHERE ID_usuario = ?";
-      const id = req.body.id;
-      con.query(sql, [id], function(err, result) {
+      const id = req.params.id;
+      con.query(sql, id, function(err, result) {
           console.log("Usuario eliminado");
+          res.send(result);
       });
     } catch (error) {
       console.error(error);
