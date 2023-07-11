@@ -1,5 +1,5 @@
 const postController = {};
-const con = require("../database");
+const con = require("../databasePost");
 postController.getPostsAll = async (req, res) => {
   try {
     const sql = "SELECT * FROM posts";

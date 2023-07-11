@@ -1,5 +1,5 @@
 const usersController = {};
-const con = require("../database");
+const con = require("../databaseUser");
 
 usersController.getUsersAll = async (req, res) => {
   try {

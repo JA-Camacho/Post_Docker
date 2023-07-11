@@ -5,6 +5,5 @@ CREATE TABLE ContentHub.posts (
   titulo VARCHAR(100),
   contenido TEXT,
   fecha_post DATE,
-  fecha_edicion DATE,
-  FOREIGN KEY (ID_usuario) REFERENCES usuarios(ID_usuario)
+  fecha_edicion DATE
 );
