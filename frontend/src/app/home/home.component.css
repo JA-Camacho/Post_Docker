@@ -25,7 +25,8 @@ nav>a {
 	margin-right: 10px;
 }
 
-nav>a:hover { /* Cuando se pasa el mouse por encima*/
+nav>a:hover {
+	/* Cuando se pasa el mouse por encima*/
 	text-decoration: underline;
 }
 
@@ -40,10 +41,10 @@ header {
 	height: 500px;
 	background: #7cd3e2;
 	background: -webkit-linear-gradient(to top, hsla(237, 96%, 67%, 0.460),
-		hsla(189, 69%, 68%, 0.651), hsla(227, 55%, 62%, 0.460)),
+			hsla(189, 69%, 68%, 0.651), hsla(227, 55%, 62%, 0.460)),
 		url(../../assets/imgs/inicio1.png);
 	background: linear-gradient(to top, hsla(237, 96%, 67%, 0.460),
-		hsla(263, 77%, 76%, 0.466), hsla(227, 55%, 62%, 0.460)),
+			hsla(263, 77%, 76%, 0.466), hsla(227, 55%, 62%, 0.460)),
 		url(../../assets/imgs/inicio1.png);
 	background-size: cover;
 	background-attachment: fixed;
@@ -73,14 +74,15 @@ header .texto-header {
 .continfo {
 	background: hsla(143, 56%, 83%, 0.589);
 }
-.continfo h1{
+
+.continfo h1 {
 	font-size: 30px;
 
 }
 
 .contenedor-info {
 	display: flex;
-	justify-content:center;
+	justify-content: center;
 	margin-left: 70px;
 }
 
@@ -88,24 +90,32 @@ header .texto-header {
 	width: 60%;
 	font-size: 20px;
 	text-align: justify;
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .slide {
 	background-size: 100% 100%;
 	top: 50%;
 	left: 50%;
-	margin-left: 400px;
+	margin-left: auto;
+	margin-right: auto;
 	width: 700px;
 	height: 400px;
 	border-radius: 10px;
 	animation: slide 15s infinite linear;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
 }
-@keyframes slide{
-	0% {background-image: url(../../assets/imgs/img1.jpg);}
-	100% {background-image: url(../../assets/imgs/img2.jpg);}
+
+@keyframes slide {
+	0% {
+		background-image: url(../../assets/imgs/img1.jpg);
+	}
+
+	100% {
+		background-image: url(../../assets/imgs/img2.jpg);
+	}
 }
+
 .imagen {
 	width: 50%;
 	margin-left: 70px;
