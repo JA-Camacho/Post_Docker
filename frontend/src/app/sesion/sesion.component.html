@@ -33,31 +33,31 @@
                                             <h4 class="mb-1 pb-0">Registrarse</h4>
                                             <div class="form-group mt-2">
                                                 <input type="text" name="nombre" class="form-style"
-                                                    placeholder="Nombre" id="nombre" autocomplete="off">
+                                                    placeholder="Nombre" id="nombre" autocomplete="off" [(ngModel)]="nombre">
                                                 <i class="input-icon uil uil-user"></i>
                                             </div>
                                             <div class="form-group mt-2">
                                                 <input type="text" name="apellidos" class="form-style"
-                                                    placeholder="Apellido" id="ape" autocomplete="off">
+                                                    placeholder="Apellido" id="ape" autocomplete="off" [(ngModel)]="apellido">
                                                 <i class="input-icon uil uil-user"></i>
                                             </div>
                                             <div class="form-group mt-2">
-                                                <input type="text" name="nombres" class="form-style"
-                                                    placeholder="Usuario" id="user" autocomplete="off">
+                                                <input type="text" name="usuario" class="form-style"
+                                                    placeholder="Usuario" id="user" autocomplete="off" [(ngModel)]="user">
                                                 <i class="input-icon uil uil-user"></i>
                                             </div>
                                             <div class="form-group mt-2">
                                                 <input type="email" name="correo" class="form-style"
-                                                    placeholder="Correo" id="correo" autocomplete="off">
+                                                    placeholder="Correo" id="correo" autocomplete="off" [(ngModel)]="correo">
                                                 <i class="input-icon uil uil-at"></i>
                                             </div>
                                             <div class="form-group mt-2">
                                                 <input type="password" name="contra" class="form-style"
-                                                    placeholder="Contraseña" id="contra" autocomplete="off">
+                                                    placeholder="Contraseña" id="contra" autocomplete="off" [(ngModel)]="password">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
 
-                                            <button class="btn mt-4" href="#"> Registrarse</button>
+                                            <button (click)="registrar();" class="btn mt-4" href="#"> Registrarse</button>
                                         </div>
                                     </div>
                                 </div>
