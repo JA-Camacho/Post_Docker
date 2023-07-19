@@ -1,0 +1,115 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.contenedor {
+	padding: 60px 0;
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+
+nav {
+	text-align: right;
+	padding: 30px 50px 0 0;
+}
+
+nav>a {
+	color: #F8F7F7;
+	font-size: 22px;
+	font-weight: 300;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+nav>a:hover { /* Cuando se pasa el mouse por encima*/
+	text-decoration: underline;
+}
+
+.titulo {
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+header {
+	width: 100%;
+	height: 500px;
+	background: #7cd3e2;
+	background: -webkit-linear-gradient(to top, hsla(237, 96%, 67%, 0.460),
+		hsla(189, 69%, 68%, 0.651), hsla(227, 55%, 62%, 0.460)),
+		url(../../assets/imgs/inicio1.png);
+	background: linear-gradient(to top, hsla(237, 96%, 67%, 0.460),
+		hsla(263, 77%, 76%, 0.466), hsla(227, 55%, 62%, 0.460)),
+		url(../../assets/imgs/inicio1.png);
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+}
+
+header .texto-header {
+	display: flex;
+	height: 430px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.texto-header h1 {
+	font-size: 100px;
+	color: #36795f;
+}
+
+.texto-header p {
+	font-size: 40px;
+	color: #62ffb6;
+}
+
+.continfo {
+	background: hsla(143, 56%, 83%, 0.589);
+}
+.continfo h1{
+	font-size: 30px;
+
+}
+
+.contenedor-info {
+	display: flex;
+	justify-content:center;
+	margin-left: 70px;
+}
+
+.contenedor-texto {
+	width: 60%;
+	font-size: 20px;
+	text-align: justify;
+    margin-bottom: 20px;
+}
+
+.slide {
+	background-size: 100% 100%;
+	top: 50%;
+	left: 50%;
+	margin-left: 400px;
+	width: 700px;
+	height: 400px;
+	border-radius: 10px;
+	animation: slide 15s infinite linear;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
+@keyframes slide{
+	0% {background-image: url(../../assets/imgs/img1.jpg);}
+	100% {background-image: url(../../assets/imgs/img2.jpg);}
+}
+.imagen {
+	width: 50%;
+	margin-left: 70px;
+	margin-right: 100px;
+	margin-bottom: 50px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
