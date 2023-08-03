@@ -31,7 +31,7 @@ postController.getPostId = async (req, res) => {
 postController.CreatePost = async (req, res) => {
   try {
     const sql = "INSERT INTO posts (ID_post,ID_usuario,autor,titulo,contenido,fecha_post,fecha_edicion) VALUES (0,?,?,?,?,?,?)"; 
-    const values = [req.ID_usuario,req.autor,req.titulo,req.contenido,req.fecha_post,req.fecha_edicion];
+    const values = [req.body.ID_usuario,req.body.autor,req.body.titulo,req.body.contenido,req.body.fecha_post,req.body.fecha_edicion];
     con.query(sql, values, function(err, result) {
         console.log(result);
     });
