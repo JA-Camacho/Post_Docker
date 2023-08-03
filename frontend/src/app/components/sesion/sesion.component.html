@@ -15,12 +15,12 @@
                                             <h4 class="mb-4 pb-3">Iniciar Sesión</h4>
                                             <div class="form-group">
                                                 <input type="email" id="correo1" name="correoI" class="form-style"
-                                                    placeholder="Correo " autocomplete="off">
+                                                    placeholder="Correo " autocomplete="off" [(ngModel)]="user">
                                                 <i class="input-icon uil uil-at"></i>
                                             </div>
                                             <div class="form-group mt-2">
                                                 <input type="password" name="contrai" class="form-style"
-                                                    placeholder="Contraseña" id="contraI" autocomplete="off">
+                                                    placeholder="Contraseña" id="contraI" autocomplete="off" [(ngModel)]="password">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
                                             <button href="#" class="btn mt-4">Ingresar</button>
@@ -45,11 +45,6 @@
                                                 <input type="text" name="usuario" class="form-style"
                                                     placeholder="Usuario" id="user" autocomplete="off" [(ngModel)]="user">
                                                 <i class="input-icon uil uil-user"></i>
-                                            </div>
-                                            <div class="form-group mt-2">
-                                                <input type="email" name="correo" class="form-style"
-                                                    placeholder="Correo" id="correo" autocomplete="off" [(ngModel)]="correo">
-                                                <i class="input-icon uil uil-at"></i>
                                             </div>
                                             <div class="form-group mt-2">
                                                 <input type="password" name="contra" class="form-style"

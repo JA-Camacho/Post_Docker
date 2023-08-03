@@ -1,4 +1,7 @@
+import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-sesion',
@@ -6,32 +9,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./sesion.component.css']
 })
 export class SesionComponent {
-  nombre: string = '';
-  apellido: string = '';
-  user: string = '';
-  correo: string = '';
-  password: string = '';
-
-  async envio(datos: any) {
-    const respuestaRaw = await fetch("172.18.0.2:8080", {
-      body: JSON.stringify(datos),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
-    const jsonDecodificado = await respuestaRaw.json();
-    console.log(jsonDecodificado);
+  fechaActual : string;
+  constructor(
+    public userService: UserService,
+    private datePipe: DatePipe
+  ){
+    this.fechaActual = this.datePipe.transform(new Date(), 'yyyy-MM-dd') || '';
   }
+  nombre = '';
+  apellido = '';
+  user = '';
+  password = '';
   
   registrar() {
-    let datos = {
-      nombre: this.nombre,
-      apellido: this.apellido,
-      user: this.user,
-      correo: this.correo,
-      password: this.password
-    };
-    this.envio(datos);
+    let user = new User(this.nombre, this.apellido, this.user, this.password, this.fechaActual);
+    this.userService.postUsers(user).subscribe((res)=>{
+      console.log(res);
+    });
   }
 }
