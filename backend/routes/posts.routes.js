@@ -3,9 +3,9 @@ const router=Router();
 
 posts=require('../controllers/posts.controllers');
 
-router.get('/posts', posts.getPostsAll);
+router.get('/', posts.getPostsAll);
 router.get('/:id', posts.getPostId);
-router.post('/posts', posts.CreatePost);
+router.post('/', posts.CreatePost);
 //router.put('', );
 router.delete('/:id', posts.DeletePostId);
 

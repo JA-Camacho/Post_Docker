@@ -6,7 +6,7 @@ import { Post } from '../models/post';
 })
 export class PostService {
   selectedPost: Post;
-  readonly URL = 'http://localhost:3000/api/post';
+  readonly URL = 'http://localhost:8080/api/post';
   constructor(private http: HttpClient) { 
     this.selectedPost = new Post();
   }
