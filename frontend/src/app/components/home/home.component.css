@@ -42,10 +42,10 @@ header {
 	background: #7cd3e2;
 	background: -webkit-linear-gradient(to top, hsla(237, 96%, 67%, 0.460),
 			hsla(189, 69%, 68%, 0.651), hsla(227, 55%, 62%, 0.460)),
-		url(../../assets/imgs/inicio1.png);
+		url(../../../assets/imgs/inicio1.png);
 	background: linear-gradient(to top, hsla(237, 96%, 67%, 0.460),
 			hsla(263, 77%, 76%, 0.466), hsla(227, 55%, 62%, 0.460)),
-		url(../../assets/imgs/inicio1.png);
+		url(../../../assets/imgs/inicio1.png);
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
@@ -108,11 +108,11 @@ header .texto-header {
 
 @keyframes slide {
 	0% {
-		background-image: url(../../assets/imgs/img1.jpg);
+		background-image: url(../../../assets/imgs/img1.jpg);
 	}
 
 	100% {
-		background-image: url(../../assets/imgs/img2.jpg);
+		background-image: url(../../../assets/imgs/img2.jpg);
 	}
 }
 
