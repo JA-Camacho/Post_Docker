@@ -33,15 +33,16 @@ h4 {
 }
 h6 span{
   padding: 0 20px;
-  text-transform: uppercase;
   font-weight: 700;
-  color:#9aeeee;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:hsl(64, 76%, 84%);
 }
 .section2{
   position: relative;
   width: 100%;
   display: block;
-  background-color: #428a8f;
+  background-color: hsla(160, 60%, 32%, 0.822);;
 }
 .full-height{
   min-height: 100vh;

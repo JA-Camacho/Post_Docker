@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-post.component.css']
 })
 export class NewPostComponent {
-
+titulo = '';
+contenido = '';
+subir() {
+  
+}
 }

@@ -1,1 +1,17 @@
-<img src="../../assets/imgs/SITIO-EN-CONSTRUCCION.jpg" alt="Construccion">
+<section class="content">
+    <h1>Nueva Publicación</h1>
+    <br>
+    <section class="conti">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Título de la publicación</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" 
+            placeholder="El calor de la noche" [(ngModel)]="titulo">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Redacta tu publicación</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="contenido"></textarea>
+        </div>
+        <button (click)="subir();" type="button" class="btn btn-success btn-lg" href="#">Subir</button>
+    </section>
+    <br>
+</section>
