@@ -10,7 +10,8 @@
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" routerLink="/">Inicio</a>
           <a class="nav-link" routerLink="/posts">Posts</a>
-          <a class="nav-link" routerLink="/registro">Registro</a>
+          <a *ngIf="!isLoggedIn();" class="nav-link" routerLink="/registro">Registro</a>
+          <a (click)="logout();" *ngIf="isLoggedIn();" class="nav-link" routerLink="/registro">Cerrar Sesion</a>
         </div>
       </div>
     </div>
