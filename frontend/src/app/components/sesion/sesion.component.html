@@ -23,7 +23,7 @@
                                                     placeholder="Contraseña" id="contraI" autocomplete="off" [(ngModel)]="password">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <button href="#" class="btn mt-4">Ingresar</button>
+                                            <button (click)="iniciarSesion();" class="btn mt-4">Ingresar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,6 @@
                                                     placeholder="Contraseña" id="contra" autocomplete="off" [(ngModel)]="password">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-
                                             <button (click)="registrar();" class="btn mt-4" href="#"> Registrarse</button>
                                         </div>
                                     </div>
