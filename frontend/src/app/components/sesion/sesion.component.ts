@@ -27,7 +27,7 @@ export class SesionComponent {
     let user = new User(this.nombre, this.apellido, this.user, this.password, this.fechaActual);
     this.userService.postUsers(user).subscribe((res) => {
       localStorage.setItem('token', 'TokenEjemplo');
-      this.router.navigate(['/']);
+      this.router.navigate(['/new-post']);
     });
 
   }
@@ -36,8 +36,13 @@ export class SesionComponent {
     this.userService.getUser(this.user, this.password).subscribe(
       (res) => {
         if (res) {
-          localStorage.setItem('token', 'TokenEjemplo');
-          this.router.navigate(['/']);
+          let usuario = res as User[];
+          usuario.forEach((values) => {
+            localStorage.setItem('token', 'TokenEjemplo');
+            localStorage.setItem('autor', values.apellido + " " + values.nombre);
+            localStorage.setItem('ID', values.ID_usuario);
+            this.router.navigate(['/new-post']);
+          })
         }
       },
       (error) => {
