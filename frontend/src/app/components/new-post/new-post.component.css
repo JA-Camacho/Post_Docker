@@ -1,0 +1,15 @@
+
+.content {
+    background: hsla(160, 60%, 32%, 0.822);
+  }
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    color: hsla(154, 100%, 1%, 0.938);
+    font-family: serif;
+  }
+  .conti {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
