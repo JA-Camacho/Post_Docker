@@ -12,9 +12,13 @@ export class UserService {
     this.selectedUser = new User();
   }
 
-  getUsers(){
+  getAllUsers(){
     return this.http.get(this.URL);
   }
+
+  getUser(user : string, pass : string){
+    return this.http.get(this.URL + "/unique/" + user + '?password=' + pass);
+  } 
 
   postUsers(user: User){
     return this.http.post(this.URL, user);
