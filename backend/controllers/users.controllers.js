@@ -15,12 +15,12 @@ usersController.getUsersAll = async (req, res) => {
   };
 }
 
-usersController.getUserId = async (req, res) => {
+usersController.getUser = async (req, res) => {
     try {
-      const sql = "SELECT * FROM usuarios WHERE ID_usuario = ?";
-      const id = req.body.id;
-      con.query(sql, [id], function(err, result) {
-          console.log(result);
+      const { user } = req.params;
+      const password = req.query.password;
+      const sql = "SELECT * FROM usuarios WHERE usuario = '" + user + "' AND password = '" + password + "'";
+      con.query(sql, function(err, result) {
           res.send(result);
       });
     } catch (error) {
@@ -34,8 +34,6 @@ usersController.getUserId = async (req, res) => {
       const sql = "INSERT INTO usuarios (ID_usuario,nombre,apellido,usuario,password,fecha_inicio_sesion) VALUES (0,?,?,?,?,?)"; 
       const values = [req.body.nombre,req.body.apellido,req.body.usuario,req.body.password,req.body.fecha_inicio_sesion];
       con.query(sql, values, function(err, result) {
-        console.log(values);
-        console.log(result);
         res.send(result);
       });
     } catch (error) {
